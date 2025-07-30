@@ -1,0 +1,373 @@
+/* HERO */
+#hero {
+  width: 100%;
+  height: 80vh;
+  background-image: url('/female-cardinal-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid var(--color-black);
+}
+
+.hero-title {
+  padding-right: 5rem;
+  align-self: flex-end;
+  color: var(--color-eggshell);
+  animation: colorFade 4s ease-in-out forwards;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards, colorFade 2s ease-in-out infinite alternate;
+  padding-bottom: 5rem;
+}
+
+.hero-title #anita-title, #anita-title-2 {
+  font-family: 'Playfair Display SC', serif;
+  font-size: 1.5rem;
+}
+
+#photography-title {
+  font-family: "Playwrite US Trad", cursive;
+  font-size: 1rem;
+}
+
+.hero-title h1 {
+  text-align: center;
+  margin: 0;
+  line-height: 0.9;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes colorFade {
+  0%   { color: var(--color-eggshell); }
+  100% { color: var(--color-teal); }
+}
+
+/* ABOUT ME */
+#about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8rem 8rem;
+  gap: 5rem;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-black);
+}
+
+#about-me p {
+  width: 300px;
+}
+
+.photo-of-anita img {
+  max-width: 400px;
+  width: 100%;
+  border: var(--color-black);
+}
+
+.about-anita {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-anita h1 {
+  font-size: 4rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.about-anita button {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-sage-gray);
+  color: var(--color-black);
+  border: 1px solid;
+  border-radius: 0;
+  width: fit-content;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.about-anita button:hover {
+  background-color: var(--color-mauve-brown);
+  color: var(--color-white);
+}
+
+.photo-of-anita {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-of-anita img {
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid;
+}
+
+
+/* SCROLL VIEW */
+#scrolling-view {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: var(--color-eggshell);
+  color: var(--color-black);
+  padding: 1rem 0;
+    border-bottom: solid 1px;
+
+}
+
+.scroll-left {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 50s linear infinite;
+}
+
+.scroll-left p {
+  display: inline-block;
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+.scroll-left p span {
+  margin: 0 0.5rem;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.scroll-left p {
+  display: inline-block;
+  white-space: nowrap;
+  margin: 0;
+}
+
+/* Keyframes to move left */
+@keyframes scroll-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* BUTTON MENU */
+#button-menu {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-eggshell);
+  border-bottom: solid 1px;
+}
+
+.button-menu-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 1rem;
+}
+
+.button-menu-container button {
+  border: 1px solid var(--color-black, #000);
+  border-radius: 0;
+  width: 30rem;
+  height: 6rem;
+  font-size: 3rem;
+  font-family: 'Playfair Display SC', serif;
+  background: transparent;
+  color: var(--color-black);
+  cursor: pointer;
+  line-height: 6rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.button-menu-container button:hover {
+  background-color: var(--color-mauve-brown);
+  color: var(--color-white);
+}
+
+
+/* GALLERY */
+#gallery {
+  padding: 5rem 2rem;
+  background-color: var(--color-white);
+  text-align: center;
+}
+
+.gallery-preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.gallery-preview img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border: 1px solid var(--color-sage-gray);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-preview img:hover {
+  transform: scale(1.02);
+}
+
+.gallery-button button {
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  border: 1px solid var(--color-black);
+  background-color: var(--color-sage-gray);
+  color: var(--color-black);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 0;
+}
+
+.gallery-button button:hover {
+  background-color: var(--color-mauve-brown);
+  color: var(--color-white);
+}
+
+/* ======================= */
+/*     MEDIA QUERIES       */
+/* ======================= */
+
+@media (max-width: 1024px) {
+  /* Reduce hero font size for tablets */
+#hero {
+    height: 40vh;
+    justify-content: center;
+  }
+
+  .hero-title {
+    padding: 20px;
+  }
+
+
+  .hero-title h1 {
+    font-size: 1rem;
+  }
+
+  #about-me {
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  .photo-of-anita {
+    height: auto;
+  }
+
+  .about-anita h1 {
+    font-size: 2.5rem;
+  }
+
+  .button-menu-container button,
+  .shop-button {
+    width: 12rem;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero {
+    height: 40vh;
+    justify-content: center;
+  }
+
+  .hero-title {
+    padding: 20px;
+  }
+
+  .hero-title h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+  }
+
+  #about-me {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+  }
+    .about-anita h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .about-anita {
+    align-items: center;
+    text-align: center;
+  }
+
+  .photo-of-anita img {
+    max-width: 30%;
+  }
+
+  .about-anita h1 {
+    font-size: 2rem;
+  }
+
+  .gallery-preview {
+    gap: 1rem;
+  }
+
+  .gallery-preview img {
+    max-width: 90%;
+  }
+
+  .button-menu-container button,
+  .shop-button {
+    font-size: 1.5rem;
+    height: 3.5rem;
+    width: 10rem;
+    line-height: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  #hero {
+    height: 50vh;
+    justify-content: center;
+  }
+
+  .hero-title h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+  }
+
+
+  .photo-of-anita img {
+    max-width: 60%;
+  }
+
+  #about-me p {
+    width: 100%;
+  }
+
+  .about-anita {
+    padding: 0;
+  }
+
+  .button-menu-container button,
+  .shop-button {
+    font-size: 1.2rem;
+    height: 3rem;
+    width: 9rem;
+    line-height: 3rem;
+  }
+}
+}
