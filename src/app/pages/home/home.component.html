@@ -56,16 +56,24 @@
 </section>
 
 <!-- BUTTON MENU -->
-  <section id="button-menu">
-    <div class="button-menu-container">
-    <button onclick="document.location='/gallery'">Gallery</button>
-    <button onclick="window.open('https://www.facebook.com/groups/989120233288366', '_blank')">Facebook</button>
-    <button onclick="window.open('https://www.flickr.com/photos/202656504@N08', '_blank')">Flickr</button>
-    <button onclick="window.open('https://www.pinterest.com/anitaswildbackyardphotography')">Pinterest</button>
-    <!-- <button onclick="window.open('https://www.etsy.com', '_blank')">Shop</button> -->
-    <!-- <button onclick="document.location='contact.html'">Contact</button> -->
-    </div>
-  </section>
+<section id="button-menu">
+  <div class="button-menu-container">
+    <!-- Internal route -->
+    <button routerLink="/gallery">Gallery</button>
+
+    <!-- External links  -->
+    <a href="https://www.facebook.com/groups/989120233288366" target="_blank" rel="noopener">
+      <button>Facebook</button>
+    </a>
+    <a href="https://www.flickr.com/photos/202656504@N08" target="_blank" rel="noopener">
+      <button>Flickr</button>
+    </a>
+
+    <a href="https://www.pinterest.com/anitaswildbackyardphotography" target="_blank" rel="noopener">
+      <button>Pinterest</button>
+    </a>
+  </div>
+</section>
 
 <!-- GALLERY   -->
 <section id="gallery">
