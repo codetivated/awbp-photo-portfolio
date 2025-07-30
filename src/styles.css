@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --color-orange: #F96E43;
+  --color-golden: #FDD589;
+  --color-forest: #7A845C;
+  --color-teal: #3D6C64;
+  --color-sage-gray: #DBDED3;
+  --color-mauve-brown: #776164;
+  --color-eggshell: #F8F6EA;
+  --color-white: #fff;
+  --color-black: #333;
+}
+
+/* Apply Cabin Condensed to the whole site */
+body {
+  font-family: 'Cabin Condensed', sans-serif;
+  color: var(--color-black);
+  background-color: var(--color-white);
+  margin: 0;
+  padding: 0;
+}
+
+/* Use Playfair Display SC for titles */
+h1, h2, h3, h4, button {
+  font-family: 'Playfair Display SC', serif;
+}
