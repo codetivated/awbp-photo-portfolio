@@ -1,0 +1,132 @@
+
+#footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 10rem;
+  border-top: 1px solid var(--color-black);
+  background-color: var(--color-eggshell);
+  flex-wrap: wrap;
+}
+
+/* Logo + Icons */
+.footer-logo-and-social-icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#footer img {
+  width: 140px;
+  height: auto;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  background-color: var(--color-mauve-brown);
+  color: var(--color-eggshell);
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.social-icons a:hover {
+  background-color: var(--color-forest, #7a845c);
+}
+
+/* Footer links */
+.links {
+  display: flex;
+  gap: 4rem;
+  padding-right: 2rem;
+}
+
+.links div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.links p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.links a {
+  color: var(--color-black, #000);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+.footer-credit {
+  width: 100%;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-black);
+}
+
+/* ========================= */
+/*      MEDIA QUERIES         */
+/* ========================= */
+
+
+
+@media (max-width: 1024px) {
+  #footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 4rem;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .footer-logo-and-social-icons {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .links {
+    flex-direction: column;
+    align-items: center;
+    padding-right: 0;
+    gap: 2rem;
+  }
+
+  .links div {
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 1.25rem;
+  }
+
+  .links a {
+    font-size: 0.95rem;
+  }
+
+  #footer img {
+    width: 100px;
+  }
+}
