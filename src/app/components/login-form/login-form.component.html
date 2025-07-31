@@ -12,3 +12,13 @@
     <p class="error" *ngIf="error">{{ error }}</p>
   </form>
 </section>
+
+<p>hello
+</p>
+
+<section class="logout-form" *ngIf="isLoggedIn">
+  <h2>Admin Area</h2>
+  <button (click)="logout()">Logout</button>
+</section>
+
+

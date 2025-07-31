@@ -16,9 +16,7 @@ export class AuthService {
   }
 
   getUser(): Observable<User | null> {
-    console.log("Fetching user authentication state...");
-    console.log(authState(this.auth));
-
+    console.log("Getting user with email:", this.auth.currentUser?.email);
     return authState(this.auth);
   }
 }

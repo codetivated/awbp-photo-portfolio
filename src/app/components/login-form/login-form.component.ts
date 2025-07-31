@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { Router, RouterModule } from '@angular/router';
-import { AdminComponent } from "../../pages/admin/admin.component";
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -10,15 +10,20 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css'],
-  imports: [FormsModule, RouterModule]
+  imports: [FormsModule, RouterModule, CommonModule]
 })
 export class LoginFormComponent {
   email = '';
   password = '';
   error = '';
+  isLoggedIn = false;
 
 
   constructor(private authService: AuthService, private router: Router) {}
+
+  ngOnInit() {
+  this.checkIsLoggedIn();
+}
 
   login() {
     this.authService.login(this.email, this.password)
@@ -31,7 +36,33 @@ export class LoginFormComponent {
       });
   }
 
-  // login() {
-  //  console.log('Login attempt with:', this.email, this.password);
-  // }
+//   login() {
+//   this.authService.login(this.email, this.password)
+//     .then(() => {
+//       this.error = '';
+//       this.checkIsLoggedIn();
+//     })
+//     .catch(err => {
+//       this.error = err.message;
+//     });
+// }
+
+  checkIsLoggedIn() {
+    console.log("Checking if user is logged in");
+    this.authService.getUser().subscribe(user => {
+      this.isLoggedIn = !!user;
+      console.log("User is logged in:", this.isLoggedIn);
+    // return this.authService.getUser().subscribe(user => !!user);
+  })
+  }
+
+  logout() {
+    this.authService.logout()
+      .then(() => {
+        this.router.navigate(['/login']);
+      })
+      .catch(err => {
+        console.error('Logout failed', err);
+      });
+  }
 }
