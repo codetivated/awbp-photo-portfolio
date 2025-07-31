@@ -5,6 +5,11 @@ dotenv.config();
 
 const targetPath = './src/environments/environment.ts';
 
+
+if (!fs.existsSync('./src/environments')) {
+  fs.mkdirSync('./src/environments', { recursive: true });
+}
+
 const envConfigFile = `
 export const environment = {
   production: false,
