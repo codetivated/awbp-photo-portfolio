@@ -8,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class UploadFormComponent {
 
+allowedEmails = ['you@example.com', 'owner@example.com'];
+canUpload = false;
+
+// constructor(private authService: AuthService) {
+//   this.authService.getUser().subscribe(user => {
+//     this.canUpload = !!user && this.allowedEmails.includes(user.email || '');
+//   });
+// }
+
+
+
 }

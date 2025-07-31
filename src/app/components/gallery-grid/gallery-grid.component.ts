@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { UploadFormComponent } from "../upload-form/upload-form.component";
 
 @Component({
   selector: 'app-gallery-grid',
-  imports: [],
+  imports: [UploadFormComponent],
   templateUrl: './gallery-grid.component.html',
   styleUrl: './gallery-grid.component.css'
 })
