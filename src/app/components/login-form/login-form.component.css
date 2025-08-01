@@ -1,10 +1,11 @@
+/* LOGIN FORM */
+
 .login-form {
   max-width: 400px;
   margin: 80px auto;
   padding: 2rem;
   background-color: var(--color-eggshell);
   border: 1px solid var(--color-black);
-  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
 }
 
 .login-form h2 {
@@ -53,4 +54,36 @@
   color: crimson;
   font-weight: bold;
   text-align: center;
+}
+
+/* LOGOUT FORM */
+
+.logout-form {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 2rem;
+  background-color: var(--color-eggshell);
+  border: 1px solid var(--color-black);
+  text-align: center;
+}
+
+.logout-form h2 {
+  color: var(--color-teal);
+  margin-bottom: 1.5rem;
+  font-size: 50px;
+}
+
+.logout-form button {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border: none;
+  padding: 0.8rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.logout-form button:hover {
+  background-color: var(--color-teal);
 }

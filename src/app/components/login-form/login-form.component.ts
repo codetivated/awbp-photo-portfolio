@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 
+
 @Component({
   selector: 'app-login-form',
   standalone: true,
@@ -36,23 +37,11 @@ export class LoginFormComponent {
       });
   }
 
-//   login() {
-//   this.authService.login(this.email, this.password)
-//     .then(() => {
-//       this.error = '';
-//       this.checkIsLoggedIn();
-//     })
-//     .catch(err => {
-//       this.error = err.message;
-//     });
-// }
-
   checkIsLoggedIn() {
     console.log("Checking if user is logged in");
     this.authService.getUser().subscribe(user => {
       this.isLoggedIn = !!user;
       console.log("User is logged in:", this.isLoggedIn);
-    // return this.authService.getUser().subscribe(user => !!user);
   })
   }
 

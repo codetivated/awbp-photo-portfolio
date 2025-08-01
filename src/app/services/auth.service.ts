@@ -19,4 +19,10 @@ export class AuthService {
     console.log("Getting user with email:", this.auth.currentUser?.email);
     return authState(this.auth);
   }
+
+  getCurrentUser(): User | null {
+    const user = this.auth.currentUser;
+    console.log("Current user:", user ? user.email : "No user logged in");
+    return user;
+  }
 }

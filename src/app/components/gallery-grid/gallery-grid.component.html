@@ -1,3 +1,40 @@
-<p>gallery-grid works!</p>
+<!-- GALLERY HERO -->
+<section id="gallery-hero">
+  <h1>Gallery</h1>
+</section>
 
-<app-upload-form></app-upload-form>
+<!-- GALLERY GRID -->
+<section id="gallery-grid">
+  <div class="gallery-container">
+    <img
+      *ngFor="let photo of photos"
+      [src]="photo.url"
+      [alt]="photo.title"
+      loading="lazy"
+    >
+  </div>
+</section>
+
+
+<section class="upload-form" *ngIf="isLoggedIn">
+
+  <h2>Upload Photo</h2>
+  <form (submit)="uploadPhoto()">
+  <label for="title">Title:</label>
+  <input type="text" id="title" [(ngModel)]="title" name="title" required />
+
+  <label for="file">Upload Photo:</label>
+  <input type="file" id="file" (change)="handleFileInput($event)" required />
+
+  <button type="submit">Upload</button>
+</form>
+
+  <div *ngIf="uploadError" class="error">
+    {{ uploadError }}
+  </div>
+
+  <div *ngIf="uploadSuccess" class="success">
+    Photo uploaded successfully!
+  </div>
+
+</section>

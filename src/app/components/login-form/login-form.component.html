@@ -1,4 +1,4 @@
-<section class="login-form">
+<section class="login-form" *ngIf="!isLoggedIn">
   <h2>Admin Login</h2>
   <form (ngSubmit)="login()">
     <label for="email">Email:</label>
@@ -13,8 +13,6 @@
   </form>
 </section>
 
-<p>hello
-</p>
 
 <section class="logout-form" *ngIf="isLoggedIn">
   <h2>Admin Area</h2>
