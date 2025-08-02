@@ -9,16 +9,14 @@ import { v4 as uuidv4 } from 'uuid';
   providedIn: 'root'
 })
 export class PhotoService {
-  private photosCollection: CollectionReference<GalleryPhoto>;
+    private photosCollection: CollectionReference;
 
   constructor(private firestore: Firestore, private storage: Storage) {
-    this.photosCollection = collection(this.firestore, 'photos') as CollectionReference<GalleryPhoto>;
+    this.photosCollection = collection(this.firestore, 'photos');
   }
 
   getPhotos(): Observable<GalleryPhoto[]> {
-    return collectionData(this.photosCollection, {
-      idField: 'id'
-    }) as Observable<GalleryPhoto[]>;
+    return collectionData(this.photosCollection, { idField: 'id' }) as Observable<GalleryPhoto[]>;
   }
 
 async uploadPhoto(title: string, file: File, uploadedBy: string): Promise<void> {
